@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-normal text-[56px] leading-[67.2px] text-white;
+  }
+  h2 {
+    @apply font-normal text-[32px] leading-[38.4px] text-white;
+  }
+  h3 {
+    @apply font-normal text-[28px] leading-[33.6px] text-white;
+  }
+  h3.small {
+    @apply text-[23px] leading-[26px];
+  }
+  h4 {
+    @apply font-normal text-[20px] leading-[30px] text-white;
+  }
+  h5 {
+    @apply text-[18px] font-normal leading-7 text-white;
+  }
+  h6 {
+    @apply text-[16px] font-normal leading-6 text-white;
+  }
+  h6.small {
+    @apply text-[14px] leading-5 text-white;
+  }
+  body {
+    background: linear-gradient(270deg, #7a777a 0%, #a6a4a2 100%);
+  }
+  .custom-container {
+    border-radius: 24px;
+    margin: 32px;
+    padding: 64px 48px;
+    background: radial-gradient(69.25% 69.25% at 50% 30.75%, #7e7b92 0%, rgba(38, 37, 44, 0.8) 100%);
+  }
+  .custom-container {
+    @apply py-16 px-12 md:py-6 md:px-4;
+  }
+  button.primary {
+    padding: 20px 36px 20px 36px;
+    gap: 8px;
+    border-radius: 16px;
+    opacity: 0px;
+    background: linear-gradient(180deg, #eb0872 0%, #591f9b 188.33%);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+
+@layer components {
+  .hero {
+    border-radius: 24px;
+    background-image: url("../img/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+  .choosen {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .choosen div {
+    border-left: 2px solid #4ef30d;
+  }
+}
+
+.bonus-programm {
+  background-image: url("../img/bonus-program-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+@media (max-width: 768px) {
+  .bonus-programm {
+    background-image: none;
+  }
+}
+
+.bonus-programm div img {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bonus-programm div:nth-child(1) img {
+  animation-delay: 0s;
+}
+.bonus-programm div:nth-child(2) img {
+  animation-delay: 0.2s;
+}
+.bonus-programm div:nth-child(3) img {
+  animation-delay: 0.4s;
+}
+.bonus-programm div:nth-child(4) img {
+  animation-delay: 0.6s;
+}
+
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.scroll-content {
+  display: flex;
+  gap: 60px; /* Контролюємо відстань між елементами */
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+.scroll-content h2 {
+  color: #333;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Замилення країв */
+.scroll-container::before,
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scroll-container::after {
+  right: 0;
+  left: auto;
+}

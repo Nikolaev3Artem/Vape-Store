@@ -746,6 +746,13 @@ button.primary {
   height: 120px;
 }
 
+#map {
+  margin-top: 2.5rem;
+  height: 400px;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
 .relative {
   position: relative;
 }

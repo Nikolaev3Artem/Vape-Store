@@ -122,6 +122,9 @@
     width: 100%;
     height: 120px;
   }
+  #map {
+    @apply w-full h-[400px] mt-10 rounded-xl;
+  }
 }
 
 .bonus-programm {

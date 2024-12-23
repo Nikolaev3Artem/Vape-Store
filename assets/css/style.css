@@ -562,6 +562,13 @@ h1 {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
 h2 {
   font-size: 32px;
   font-weight: 400;
@@ -576,6 +583,13 @@ h3 {
   line-height: 33.6px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 h3.small {
@@ -631,6 +645,7 @@ body {
 
 @media (max-width: 768px) {
   .custom-container {
+    margin: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 1rem;
@@ -668,6 +683,23 @@ button.primary {
 
 .choosen div {
   border-left: 2px solid #4ef30d;
+}
+
+.burger-menu {
+  display: hidden;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  background: radial-gradient(88.89% 88.89% at 50.15% 11.11%, #7e7b92 0%, #26252c 83.33%);
+  padding: 16px;
+  padding-bottom: 55px;
+}
+
+.relative {
+  position: relative;
 }
 
 .my-12 {
@@ -733,6 +765,11 @@ button.primary {
 
 .h-\[27px\] {
   height: 27px;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
@@ -813,6 +850,10 @@ button.primary {
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-20 {
@@ -949,6 +990,10 @@ button.primary {
 @media (max-width: 768px) {
   .bonus-programm {
     background-image: none;
+  }
+
+  .button.primary {
+    padding: 16px 32px 16px 32px;
   }
 }
 
@@ -1104,6 +1149,10 @@ button.primary {
     flex-direction: column;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -1116,7 +1165,25 @@ button.primary {
     gap: 1.5rem;
   }
 
+  .md\:p-4 {
+    padding: 1rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
   .md\:text-\[56px\] {
     font-size: 56px;
+  }
+
+  .md\:leading-\[48px\] {
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 380px) {
+  .sm\:text-\[32px\] {
+    font-size: 32px;
   }
 }

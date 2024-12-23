@@ -721,7 +721,7 @@ button.primary {
   margin-top: 8px;
   padding: 12px 0px 0px 0px;
   gap: 8px;
-  border-radius: 4px 0px 0px 0px;
+  border-radius: 4px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
   background: rgba(0, 0, 0, 0.2);
@@ -732,7 +732,7 @@ button.primary {
   margin-top: 8px;
   padding: 12px 0px 0px 0px;
   gap: 8px;
-  border-radius: 4px 0px 0px 0px;
+  border-radius: 4px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
   background: rgba(0, 0, 0, 0.2);
@@ -1144,6 +1144,10 @@ button.primary {
 }
 
 @media (max-width: 768px) {
+  .md\:m-0 {
+    margin: 0px;
+  }
+
   .md\:mb-4 {
     margin-bottom: 1rem;
   }

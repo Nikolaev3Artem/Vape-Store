@@ -3,6 +3,7 @@ function burger_menu() {
   const burger = document.querySelector(".burger-menu-button");
   const close_btn = document.querySelector(".close-btn");
   const nav_menu = document.querySelector(".menu");
+  const btn = document.querySelector("a.primary");
   menu.style.display = "none";
   burger.addEventListener("click", () => {
     if (menu.style.display == "flex") {
@@ -19,6 +20,13 @@ function burger_menu() {
     }
   });
   nav_menu.addEventListener("click", () => {
+    if (menu.style.display == "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  });
+  btn.addEventListener("click", () => {
     if (menu.style.display == "flex") {
       menu.style.display = "none";
     } else {

@@ -27,8 +27,12 @@
   h6.small {
     @apply text-[14px] leading-5 text-white;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background: linear-gradient(270deg, #7a777a 0%, #a6a4a2 100%);
+    scroll-behavior: smooth;
   }
   .custom-container {
     border-radius: 24px;

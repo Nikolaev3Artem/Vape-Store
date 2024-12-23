@@ -822,6 +822,10 @@ button.primary {
   height: 27px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -845,6 +849,10 @@ button.primary {
 
 .w-\[30\%\] {
   width: 30%;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .w-\[45\%\] {
